@@ -1,7 +1,7 @@
 pages:
   stage: deploy
   script:
-  - apt-get update -qq && apt-get install -y -qq lsb_release xsltproc tidy rsync
+  - apt-get update -qq && apt-get install -y -qq lsb-release xsltproc tidy rsync
   - lsb_release -a
   - make
   - mv build public
