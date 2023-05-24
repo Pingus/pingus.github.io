@@ -33,7 +33,7 @@
 
   <section title="IRC">
     <p>For a quick help you can try the IRC server <span
-      class="irc">irc.freenode.net:6667</span> and the channel <span
+      class="irc"><a href="ircs://irc.libera.chat:6697">irc.libera.chat</a></span> and the channel <span
       class="irc">#pingus</span>, you can find the project maintainer
       (nick: grumbel) there most of the time. From time to time there
       will also be IRC Meetings with larger parts of the development
