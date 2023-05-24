@@ -13,7 +13,7 @@
           default = pingus-htdocs;
 
           pingus-htdocs = pkgs.stdenv.mkDerivation rec {
-            pname = "htdocs";
+            pname = "pingus-htdocs";
             version = "0.0.0";
 
             src = ./.;
