@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pingus - FAQ</title>
+<link rel="stylesheet" type="text/css" href="default.css">
+<link rel="alternate stylesheet" title="Desert Theme" type="text/css" href="halloween.css">
+<link rel="alternate stylesheet" title="Desert Theme" type="text/css" href="desert.css">
+<link rel="alternate stylesheet" title="Snow Theme" type="text/css" href="snow.css">
+<link rel="alternate stylesheet" title="X-Mas Theme" type="text/css" href="xmas.css">
+<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+<div id="logo"><a href="http://pingus.seul.org"><img src="images/logo_pingus.png" alt="Pingus"></a></div>
+<div id="page">
+<div id="nav">
+<ul>
+<li><a class="menuitem" href="index.html">Home</a></li>
+<li><a class="menuitem" href="news.html">News</a></li>
+<li><a class="menuitem" href="screenshots-0.7.html">Screenshots</a></li>
+<li><a class="menuitem" href="download.html">Download</a></li>
+<li><a class="menuitem" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div id="header">
+<h1>FAQ</h1>
+</div>
+<div id="body">
+<div id="faqtoc"></div>
+<h2>FAQs - Frequently Asked Questions (and Answers)</h2>
+<ul>
+<li><a href="#faqidm140737349279872">I am stuck, how can I beat level XY?</a></li>
+<li><a href="#faqidm140737349276976">Where can I find more levels?</a></li>
+<li><a href="#faqidm140737349268416">How do I start the other levels?</a></li>
+<li><a href="#faqidm140737349264928">Pingus runs too slow. Is there any way to make it faster?</a></li>
+</ul>
+<div style="float: right;"><small>01 Sep 2011</small> [<small><a href="#faqtoc">Up</a></small>]</div>
+<h3 id="faqidm140737349279872">I am stuck, how can I beat level XY?</h3>
+<div class="answer">
+<p>You can find full <a href="http://www.youtube.com/playlist?list=PL85CB546B69E1E313">walkthrough videos for the Tutorial Island and the Halloween 2007 levelset</a> on Youtube.</p>
+</div>
+<div style="float: right;"><small>04 Oct 2010</small> [<small><a href="#faqtoc">Up</a></small>]</div>
+<h3 id="faqidm140737349276976">Where can I find more levels?</h3>
+<div class="answer">
+<p>Besides the 22 tested and cleaned up levels of the first island that come with Pingus. There are also around 120 levels that might be playable and another 100 levels that are incomplete at the moment. These levels can be found in the <span class="teletype">data/levels/playable</span> and <span class="teletype">data/levels/wip/</span> (wip = work in progress) directories:</p>
+<dl>
+<dt><span class="teletype">data/levels/playable/</span></dt>
+<dd>The levels in the <span class="teletype">playable/</span> directory might be playable, but there is no guarantee for that. They might been broken due to engine changes, they might be far too easy or far too hard or simply incomplete.</dd>
+<dt><span class="teletype">data/levels/wip/</span></dt>
+<dd>The <span class="teletype">wip/</span> directory contains levels that are not playable at all. Some of them might even lack entrances and/or exits. Don't be surprised that you can't play them. Instead, these levels can be used as starting points for levels you want to create yourself with the level editor.</dd>
+</dl>
+</div>
+<div style="float: right;"><small>04 Dec 2010</small> [<small><a href="#faqtoc">Up</a></small>]</div>
+<h3 id="faqidm140737349268416">How do I start the other levels?</h3>
+<div class="answer">
+<p>There are two ways to start the levels. The first one is to do it simply via the command line:</p>
+<p><code>pingus data/levels/playable/somelevel.pingus</code></p>
+<p>The other, probably more userfriendly, way is to simply load them into the level editor and then click the play button.</p>
+</div>
+<div style="float: right;"><small>14 Jan 2007</small> [<small><a href="#faqtoc">Up</a></small>]</div>
+<h3 id="faqidm140737349264928">Pingus runs too slow. Is there any way to make it faster?</h3>
+<div class="answer">
+<p>There are multiple ways to tune the running speed of Pingus.<br>
+Firstly, reducing the screen colour depth (to 16bit, for example) on a slower computer might give you a boost of around 50% percent, depending on your hardware. X11 doesn't allow switching color depth at run time, and the exact instructions for doing this are outside of the scope of this FAQ. Consult your distribution documentation for more information.</p>
+<p>Secondly, a gain in speed can be achieved by reducing the display resolution of Pingus. For example, if you want to run Pingus at 640x480 you can do this with the following command:</p>
+<p><code>pingus -g 640x480</code></p>
+<p>Thirdly, you can run Pingus in a <em>fast-mode</em>. This mode disables all costly particle effects and the background. Thus, Pingus will look less pretty, but will probably be a good amount faster. Fast-mode can be turned on with:</p>
+<p><code>pingus --fast-mode</code></p>
+<p>Remember, the <em>fast-mode</em> has lots of room for improvement. If it doesn't help you make Pingus run fast enough, not all is lost.</p>
+<p>If that is not enough, you might also want to play with the <span class="teletype">min-frame-skip</span> and <span class="teletype">max-frame-skip</span> options. Both should result in a more uniform frame-rate. This can make the game jerky, but playability can be improved nonetheless.</p>
+<p>Finally, the 'F11' key can help you a great deal in your optimisation process by showing the frame-rate counter.</p>
+</div>
+</div>
+<div id="footer">Copyright © 1998-2015 <a href="http://grumbel.blogspot.co.at/">Ingo Ruhnke</a> &lt;<a href="mailto:grumbel@gmail.com">grumbel@gmail.com</a>&gt;</div>
+</div>
+</body>
+</html>

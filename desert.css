@@ -1,0 +1,299 @@
+body
+{
+  font-family: sans-serif;
+  background-position: left top;
+  background-image: url("images/desert_background.jpg");
+  background-repeat: repeat-x;
+  background-color: #cdb09e;
+  background-attachment:fixed;
+  color: black;
+}
+
+.teletype {
+    font-family: monospace;
+}
+
+.key {
+    font-family: monospace;
+}
+
+.file {
+    font-family: monospace;
+}
+
+#logo
+{ 
+  text-align: center;
+  padding: 0;
+  margin:  0;
+}
+
+#page
+{ 
+  width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav
+{
+  text-align: center;
+  margin-bottom:  0;
+  padding: 0;
+  border-width: 0;
+}
+
+#header
+{
+  border-radius:          0.5em 0.5em 0em 0em;
+  -moz-border-radius:          0.5em 0.5em 0em 0em;
+  -webkit-border-radius:          0.5em 0.5em 0em 0em;
+
+  background: #cdb09e;
+
+  border-style: solid solid none solid;
+  border-color: black;
+  border-width: 1px;
+ 
+  position: relative;
+}
+
+#body
+{
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-style: none solid none solid;
+  border-width: 1px;
+  padding: 2em 4em;
+}
+
+#footer 
+{
+  color: black;
+  font-size: smaller;
+  font-family: sans-serif;
+
+  text-align: right;
+  background: #cdb09e;
+  padding: 5px;
+  border-style: none solid solid solid; 
+  border-color: black;
+  border-width: 1px; 
+  margin-top: 0;
+
+  border-radius:     0em 0em 0.5em 0.5em;
+  -moz-border-radius:     0em 0em 0.5em 0.5em;
+  -webkit-border-radius:     0em 0em 0.5em 0.5em;
+}
+
+#header h1
+{
+  color: white;
+
+  margin: 0 3em;
+  padding: 0.125em 0;
+}
+
+#footer a 
+{ 
+  text-decoration: none;
+}
+
+#nav ul
+{ 
+  list-style-type: none;
+  margin:  0;
+  padding: 0;
+}
+
+#nav ul>li
+{ 
+  display: inline;
+  margin:  0;
+  padding: 0;
+}
+
+#nav a.menuitem:visited { 
+  color: black;
+}
+
+#nav a.menuitem
+{
+  text-decoration: none;
+  margin:  0.25em 0.25em 0 0.25em;
+  padding: 0.25em 1em 0.5em 1em;
+
+  color: black;        
+
+  border-radius:          0.5em 0.5em 0 0;
+  -moz-border-radius:          0.5em 0.5em 0 0;
+  -webkit-border-radius:          0.5em 0.5em 0 0;
+
+  font-size: 1em;
+  font-weight: bold;
+
+  font-family: sans-serif;
+  text-align: center;
+
+  border-color: black;
+  border-style: solid solid none solid;
+  border-width: 1px;
+
+  background-color: #bda08e;
+
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+}
+
+#nav a.menuitem:hover
+{
+  background-color: #cdb09e;
+}
+
+#nav a.menuitemcurrent
+{ 
+  background-color: #cdb09e;
+
+  border-bottom-style: solid;
+  border-bottom-color: #cdb09e;
+  border-bottom-width: 1px;
+
+  position: relative;
+  top: 1px;
+  z-index: 1;
+}
+
+div.screenshotmenu-center 
+{ 
+  text-align: center;
+}
+
+ul.screenshotmenu
+{
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 auto 1.5em auto;
+  padding: 0.25em 0em;
+  background-color: #cdb09e;
+  border-style: solid;
+  border-width: 1px;
+  border-radius:  1em;
+  -moz-border-radius:  1em;
+  -webkit-border-radius:  1em;
+}
+
+ul.screenshotmenu>li
+{
+  display: inline;
+  list-style-type: none;
+}
+
+ul.screenshotmenu>li a
+{ 
+  padding: 0.25em 1em;
+  text-decoration: none;
+}
+
+ul.screenshotmenu>li a:hover
+{ 
+  background-color: white;
+  border-radius:  1em;
+  -moz-border-radius:  1em;
+  -webkit-border-radius:  1em;
+}
+
+
+h2,h3,h4
+{ 
+  font-family: sans-serif;
+  margin-top: 0px;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  padding-left: 1.0em;
+}
+
+p { 
+  text-indent: 1em;
+}
+
+div.newsitem { 
+  margin-bottom: 1.5em;
+}
+
+div.newsdate { 
+  font-weight: bold;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  padding-bottom: 0.25em;
+}
+
+div.newsbody {
+  padding-top: 0.5em;
+  padding-left: 1em;
+}
+
+div.answer {
+  margin-bottom: 1.5em;
+}
+
+.irc {
+  font-family: monospace;
+  color: rgb(0,0,150);
+}
+
+.command {
+  font-family: monospace;
+  color: rgb(200, 0, 0);
+}
+
+img
+{
+  border-style: none;
+}
+
+img.screenshot {
+  border-style: solid;
+  border-width: thin;
+  display: inline-block;
+}
+
+a img.screenshot {
+  border-color: black;
+  margin: 1em;
+}
+
+a:visited img.screenshot {
+  border-color: black;
+}
+
+a:hover img.screenshot {
+  border-color: grey;
+}
+
+a:visited {
+  color: rgb(0,0,100);
+}
+
+a:hover {
+  color: rgb(0,0,0);
+}
+
+a {
+  color: rgb(50,50,200);
+}
+
+.youtube { 
+  margin: 0 auto;
+  display: block;
+}
+
+dd { 
+  margin-bottom: 1em;  
+}
+
+/* EOF */

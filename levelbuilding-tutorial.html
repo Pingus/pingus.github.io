@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Pingus - Building a Pingus level</title>
+<link rel="stylesheet" type="text/css" href="default.css">
+<link rel="alternate stylesheet" title="Desert Theme" type="text/css" href="halloween.css">
+<link rel="alternate stylesheet" title="Desert Theme" type="text/css" href="desert.css">
+<link rel="alternate stylesheet" title="Snow Theme" type="text/css" href="snow.css">
+<link rel="alternate stylesheet" title="X-Mas Theme" type="text/css" href="xmas.css">
+<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+<div id="logo"><a href="http://pingus.seul.org"><img src="images/logo_pingus.png" alt="Pingus"></a></div>
+<div id="page">
+<div id="nav">
+<ul>
+<li><a class="menuitem" href="index.html">Home</a></li>
+<li><a class="menuitem" href="news.html">News</a></li>
+<li><a class="menuitem" href="screenshots-0.7.html">Screenshots</a></li>
+<li><a class="menuitem" href="download.html">Download</a></li>
+<li><a class="menuitem" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div id="header">
+<h1>Building a Pingus level</h1>
+</div>
+<div id="body">
+<p><img src="images/editor.jpg" style="float: right;" alt=""></p>
+<h2>Introduction</h2>
+<p>Building a level for Pingus is actually very easy with the current level editor, but there are still some things that doesn't work as they should. This little guide should make sure that everything works smooth for you.</p>
+<h2>Starting from scratch</h2>
+<a href="images/editor_tutorial_editor.jpg"><img src="images/editor_tutorial_editor_small.jpg" alt="Editor" style="float: right;"></a>
+<p>First of launch Pingus and select the large <em>Editor</em> button. You are now inside the level editor.</p>
+<p>Lets start with something simple, insert your first object. Press the <span class="key">Insert</span> button on your keyboard or on the button panel at the left side of the screen. You will now see a list of object types you can insert. The letters in front of the type names describe the keys you have to press to insert the object type. Sorry there is at the moment no mouse support in the selection menus.</p>
+<p>Ok, lets insert a ground piece of type ground, to do that press <span class="key">g</span>. I'll explain the different ground piece types later in this article. After a short loading sequence, you will see a list of all the gfx which are available. To scroll down the list simply move the mouse to the bottom of the screen. Now click on an object to insert it into the level.</p>
+<a href="images/editor_tutorial_objsel.jpg"><img src="images/editor_tutorial_objsel_small.jpg" alt="Surface Selector" style="float: right;"></a>
+<p>The first ground piece is now in place, you can simply click on it and move it around when you hold down the mouse button. To duplicate it press <span class="key">d</span>. The duplicated object will be inserted at the same position as the original object, only with a short offset to the bottom/right.<br>
+If you want to move around the duplicated object, its a good idea to move it a bit away from the old object first, so that you don't actually select the wrong object. This becomes especially important when have grouped some objects. To do that use the cursor keys, hold down the shift key to get a faster movement.</p>
+<h2>Entrances</h2>
+<p>Now that we have some ground to walk on, we need an entrance to let the Pingus enter the level. Hit <span class="key">insert</span> and <span class="key">e</span> for an entrance. You will now see a list of entrance types, select the "generic" one. After that is done you will see a black arrow with a green "G" to its site, that is the entrance or more exactly the position where the Pingus can enter the level. The "generic" entrance doesn't use any gfx.</p>
+<h2>Exits</h2>
+<p>The Pingus can now enter the level, lets place a exit so that they can leave it again. Again press <span class="key">Insert</span> and then select Exit with <span class="key">x</span>. You get the same list of surfaces you got when you inserted the ground piece. Select a surface, which looks like an exit and place it where the Pingus can reach it. Now your done the level should be ready for a test.</p>
+<h2>Starting the level the first time</h2>
+<a href="images/editor_tutorial_level.jpg"><img src="images/editor_tutorial_level_small.jpg" alt="Level" style="float: right;"></a>
+<p>Now that the level is basically done, lets start it by pressing <span class="key">F4</span> or the "Run" key on the button panel. The level will than start and you can test it. If your are done press <span class="key">Esc</span> or wait until the level is complete. After testing your level you will come back into the level editor.</p>
+<h2>Saving and loading</h2>
+<p>Its a good idea to save the level from time to time, to do that press <span class="key">F6</span> and enter a file name for it, for example <span class="file">my_test</span>. Node that the filenames <em>must not</em> have an ending like <span class="file">.plf</span> or <span class="file">.psm</span>. The level will than be saved to <span class="file">~/.pingus/levels/my_test.plf</span> and <span class="file">~/.pingus/levels/my_test.psm</span><br>
+To load a level press <span class="key">F5</span> and input the filename. The dialog also has a primitive tab-completion. To use it activate the console by pressing <span class="key">^</span> and then press <span class="key">Tab</span>. The completion will go into the console. The tab-completion is currently not fully functional, therefor it will only work in the default directory and in <em>no</em> other directory.</p>
+<h2>Beautifying the level</h2>
+<p>You might have noticed that there is still a lot of stuff missing in your level. You have an ugly default background and your Pingus appeared out of nothing. So lets start to make it a little nicer.</p>
+<h3>Changing the background</h3>
+<p>To change the background press <span class="key">F10</span> and select one of the available backgrounds.</p>
+<h3>Building an entrance</h3>
+<a href="images/editor_tutorial_entrance.jpg"><img src="images/editor_tutorial_entrance_small.jpg" alt="Entrance" style="float: right;"></a>
+<p>The default entrance just adds a position where the Pingus enter the level, but no gfx, so that is the next thing to add. To do that you have to use hotspots. Hotspots are graphical objects, which don't influence the collision map. To add a hotspot, press <span class="key">Insert</span> and then <span class="key">h</span> and select a thing that looks like an entrance. You need two surfaces for an entrance, one which is behind the Pingus and one that is above the Pingus to get a pseudo 3D effect.</p>
+<p>Select the first hotspot and than lower it below the Pingus level which is at z_pos 75. Press <span class="key">Shift-PgDown</span> to lower the z_pos value to -100, note that you can see the z-pos in the status line. <span class="key">PgDown</span> itself will not change the z-pos, but instead only change the ordering of all objects, which have the same z-pos. After your done with the bottom hotspots add the top hotspot, to raise it press <span class="key">Shift-PgUp</span> and bring it to a z-pos value of 100. Finally adjust the position so that it looks correct.</p>
+<h3>Adding some grass</h3>
+<a href="images/editor_tutorial_level2.jpg"><img src="images/editor_tutorial_level2_small.jpg" alt="Level (beautified)" style="float: right;"></a>
+<p>Stones alone looks much to simple to be attractive, so lets add some grass.<br>
+Grass is special since it shouldn't influence the way the Pingus are walking over the ground, but it should be erasable by explosions and diggers or miners, for this reason there is the special ground type "transparent". Press <span class="key">Insert</span> and <span class="key">n</span> and select a piece of grass and place it over the stones. Try to add some more ground pieces, and viola, the level looks much better now.</p>
+<h3>Adding lava</h3>
+<p>Now you might want to add some lava or water under the stones, but that is currently not implemented in the editor, so you have to editor the level files directly. Open your level file, which should be saved under <span class="file">~/.pingus/levels/my_test.plf</span> and insert the following text at the end of the file:</p>
+<pre>liquid {
+    image = (resource)"Liquid/lava";
+    x_pos = -40;
+    y_pos = 412;
+    z_pos = -100;
+    width = 1400;
+    }
+
+    liquid {
+    image = (resource)"Liquid/lava";
+    x_pos = -40;
+    y_pos = 412;
+    z_pos = 100;
+    width = 1400;
+    }</pre>
+<p>If you are done, save the file and reload it into the level editor. You will see then some lava floating around. Adjust the position of the lava and you are done. Its a good idea to have some lava in the background and another lava object on top of the level where the position is shifted a bit to the left, that will result in a pseudo 3D effect. If the lava is not width enough, change the parameter in the level file reload the level again.</p>
+<h3>Well done</h3>
+<p>Now you know the basics of level editing, all that is missing now is a good idea for a level. If you have created some levels, please mail them to <a href="mailto:grumbel@gmail.com">Ingo Ruhnke</a> so that they can go into the next Pingus release.</p>
+<p>The next part of this tutorial will explain how the level are structured, how the objects are ordered and what object types exist.</p>
+<h2>Level Structure</h2>
+<p>Before I start to explain all the different object types its a good idea to understand the map structure of Pingus first.</p>
+<p>A Pingus level consists of multiple layers of gfx maps and one additional layer for the collision detection.<br>
+The gfx maps consist of one layer for the background and on for the gfx-map, that's the ground where you can dig and blast holes in it. The rest of the gfx layers are hotspots objects, entrances, exits, etc. and the Pingus themselves.</p>
+<h2>Z-Pos</h2>
+<p>To influence the ordering of objects you have two possibilities, first you can simply lower and raise it with <span class="key">PgUp</span> and <span class="key">PgDown</span>, but that will only work inside a layer. For example if you want to raise one ground piece above another that's the right way, but if you want to lower a hotspot below the ground layer, than that's the wrong way. To accomplish that you have to press <span class="key">Shift PgUp</span> or <span class="key">Shift PgDown</span> (or <span class="key">Ctrl</span>) to change the z-pos of the object. If an object its below zero, than it will be draw behind the ground layer, if its above 75 it will get drawn above the ground map and the Pingus, if an object is between 0 and 75 it will be drawn above the ground layer, but behind the Pingus layer. So the z-pos describes the ordering of the layers.</p>
+<h2>Object types</h2>
+<h3>Groundpieces (ground, transparent, solid)</h3>
+<p>Groundpieces are the ground where the Pingus can walk. They are they are at runtime combined to a single gfx map and then blitted at once. They can have different types, which will change the way how they are handled on the collision map.</p>
+<h4>ground</h4>
+<p>Normal ground is of type ground, the Pingus can dig through it and walk on it and blast it away.</p>
+<h4>solid</h4>
+<p>Solid ground is like the normal ground, but the Pingus can't dig through it. This is meant for metal plates and other stuff which is obviously not passable.</p>
+<h4>transparent</h4>
+<p>Transparent ground pieces are objects, which have no influence on the collision map, therefore the Pingus can't walk on it. But transparent ground pieces are blitted to the gfx map, so the Pingus will remove it if they explode or dig on it. This ground type is especially meant for grass or other little gimmicks which make a level nice, but which shouldn't have influence of it.</p>
+<h4>bridge</h4>
+<p>The bridges which a bridger builds are of type ground, the special property of the bridge property is that the Pingus can walk through it from</p>
+<h3>Hotspots</h3>
+<p>Hotspots are gfx objects which don't get blitted to the gfx map, instead they are draw separately. This has the consequences, that they can't be digged away and that they can scroll at a different speed than the rest of the ground (parallax scrolling). Hotspots also have the advantage that they have a z-pos, therefore they can be placed above or below the Pingus.<br>
+Entrances for example consist normally of three objects an hotspots for the back side of the entrance, an hotspot for the front side of the entrance and an entrance object for the middle position.</p>
+<h3>Entrances</h3>
+<p>Entrances are the places where the Pingus enter a level, they normally don't draw any gfx, therefore it is required that you add some Hotspots above and below them to make them look realistic.</p>
+<h3>Exits</h3>
+<p>Exits are similar to hotspots, but they provide first an exit point, where the Pingus can leave a level and second they erase an area in the collision map, so that the exit isn't blocked by any objects in front of them.</p>
+<h3>Liquids</h3>
+<p>Liquids are things like lava, water or acid. The consist of a single image which is blitted multiple times up to a given width. In addition to hotspots they also manipulate the collision map so that the area is marked as <em>deadly</em>.</p>
+</div>
+<div id="footer">Copyright © 1998-2015 <a href="http://grumbel.blogspot.co.at/">Ingo Ruhnke</a> &lt;<a href="mailto:grumbel@gmail.com">grumbel@gmail.com</a>&gt;</div>
+</div>
+</body>
+</html>
