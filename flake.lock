@@ -315,11 +315,11 @@
         "sdl2-src": "sdl2-src"
       },
       "locked": {
-        "lastModified": 1786387144,
-        "narHash": "sha256-fpVJryRPeau8Ux3Lf7g0yZvkd3hLYbtbxsqRQmkSfiA=",
+        "lastModified": 1786645148,
+        "narHash": "sha256-Z33vfRsGIlXw7PSIsczHe6AzQ8HroLQwc96OrMUpb3g=",
         "owner": "pingus",
         "repo": "pingus",
-        "rev": "c4de1cc7c0b0325e3f7cb54bf40385e48af50277",
+        "rev": "7d9bc4adf2735023fd1bf13b86b384d9f29e7bdb",
         "type": "github"
       },
       "original": {
