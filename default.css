@@ -295,4 +295,44 @@ dd {
   margin-bottom: 1em;  
 }
 
+.playlaunch,
+.playscreenshot {
+  text-align: center;
+}
+
+a.playbutton,
+a.playbutton:visited {
+  display: inline-block;
+  padding: 0.6em 2em;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: $COLOR-PAGEHEADER$;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+
+a.playbutton:hover {
+  color: black;
+  background-color: $COLOR-PAGEHEADER-LIGHT$;
+}
+
+table.controls {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table.controls th,
+table.controls td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.25em 1em 0.25em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+table.controls th {
+  white-space: nowrap;
+}
+
 /* EOF */

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page title="Play Online">
+  <section title="Play Pingus in your Browser">
+    <p>
+      Pingus can be played directly in your web browser, no download
+      or installation required. The web version is the regular Pingus
+      game compiled to <a href="https://webassembly.org/">WebAssembly</a>
+      and contains the complete game, including the worldmap, the
+      story and all levels.
+    </p>
+
+    <p class="playlaunch">
+      <a class="playbutton" href="wasm/pingus.html">Launch Pingus</a>
+    </p>
+
+    <p class="playscreenshot">
+      <a href="wasm/pingus.html"><img class="screenshot" alt="Pingus worldmap" src="images/screen_0.7.0-3_small.jpg" title="Launch Pingus"/></a>
+    </p>
+  </section>
+
+  <section title="Before you Start">
+    <ul>
+      <li>
+        The game data is about <strong>35&#160;MB</strong>, so the
+        first start can take a moment depending on your connection.
+        A progress bar is shown while loading.
+      </li>
+      <li>
+        A recent desktop browser (Firefox, Chrome, Edge or Safari)
+        with a mouse is recommended. Pingus is played with a mouse,
+        touchscreens may work but are not the main target.
+      </li>
+      <li>
+        This is a <strong>development version</strong> built from
+        the current Git tree, not the stable 0.7.6 release, so expect
+        the occasional rough edge. Bugs can be reported on
+        the <a href="https://github.com/Pingus/pingus/issues">issue tracker</a>.
+      </li>
+    </ul>
+  </section>
+
+  <section title="Saving your Progress">
+    <p>
+      Your progress, such as solved levels and the position on the
+      worldmap, is saved automatically in your browser's local
+      storage. It stays there between visits, but it is tied to this
+      browser on this computer and will be lost if you clear your
+      browser's site data.
+    </p>
+
+    <p>
+      Below the game you find <em>Download backup</em>
+      and <em>Upload backup</em> buttons. Use them to keep a copy of
+      your savegame or to move it to another browser or computer.
+    </p>
+  </section>
+
+  <section title="Controls">
+    <table class="controls">
+      <tr><th>Left mouse button</th><td>Select an action from the button panel, apply it to a pingu</td></tr>
+      <tr><th>Right/middle mouse button</th><td>Hold and drag to scroll the level</td></tr>
+      <tr><th>Mouse wheel, <span class="key">Tab</span>, <span class="key">1</span>&#8211;<span class="key">0</span></th><td>Choose an action</td></tr>
+      <tr><th>Arrow keys</th><td>Scroll the level</td></tr>
+      <tr><th><span class="key">P</span></th><td>Pause</td></tr>
+      <tr><th><span class="key">F</span> / <span class="key">Space</span></th><td>Fast forward</td></tr>
+      <tr><th><span class="key">S</span></th><td>Single step (while paused)</td></tr>
+      <tr><th><span class="key">A</span></th><td>Armageddon, blow up all pingus</td></tr>
+      <tr><th><span class="key">Escape</span></th><td>Leave the level / go back</td></tr>
+    </table>
+
+    <p>
+      The <em>Fullscreen</em> button below the game gives you a
+      larger view, <em>Pause</em> freezes the game completely.
+      Switching to another browser tab also pauses the game.
+    </p>
+  </section>
+
+  <section title="Other Versions">
+    <p>
+      If you prefer a native version for your computer, have a look at
+      the <a href="download.html">download page</a>.
+    </p>
+  </section>
+</page>

@@ -1,6 +1,13 @@
 <?xml version="1.0" ?>
 
 <page title="Download">
+  <section title="Play Online">
+    <p>
+      Don't want to install anything? A development version of Pingus
+      can be <a href="play.html">played directly in your browser</a>.
+    </p>
+  </section>
+
   <section title="Playable Versions - Stable">
     <subsection title="Windows">
       <ul>

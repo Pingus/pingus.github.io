@@ -11,6 +11,7 @@ OUTPUTFILES = \
  build/faq.html      \
  build/contact.html      \
  build/download.html \
+ build/play.html \
  build/screenshots.html \
  build/screenshots-0.0.html \
  build/screenshots-0.1.html \
