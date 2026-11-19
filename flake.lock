@@ -72,16 +72,32 @@
         "url": "https://libsdl.org/release/SDL2-devel-2.32.8-mingw.tar.gz"
       }
     },
+    "arkos-sysroot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787339014,
+        "narHash": "sha256-vdc15JmtewgOwZPk8PfWZzM+t19P6YlRfe2Jp02+ycg=",
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "rev": "3d2a98fe2fdff123fe4c6c7c7e9f6c0150c99a1c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "lastModified": 1794427683,
+        "narHash": "sha256-o7ey9gEilsxaifqJWnBDlYSKbNWYQYtKwDyXeZU2kaU=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "rev": "cd489559845d81f673a12885576016c65cbe9363",
         "type": "github"
       },
       "original": {
@@ -231,11 +247,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1786599213,
-        "narHash": "sha256-yNJd40f11EzXBjSByCB7IPpeFFAdeoSKKM67dGkfFoU=",
+        "lastModified": 1794890597,
+        "narHash": "sha256-lME2lHoDHAaSHP3/okgiVoJ0icVEvsQH8LeU3We7tcc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0e251e24a4f24e036a084b6b4b2d2491af4167f4",
+        "rev": "04906337b6d53e8bb0eaf0470ae9f070a4d4eb55",
         "type": "github"
       },
       "original": {
@@ -305,6 +321,7 @@
       "inputs": {
         "SDL2-win32": "SDL2-win32",
         "SDL2_image-win32": "SDL2_image-win32",
+        "arkos-sysroot": "arkos-sysroot",
         "flake-utils": "flake-utils_4",
         "libmodplug-win32": "libmodplug-win32",
         "libxmp-src": "libxmp-src",
@@ -315,11 +332,11 @@
         "sdl2-src": "sdl2-src"
       },
       "locked": {
-        "lastModified": 1786645148,
-        "narHash": "sha256-Z33vfRsGIlXw7PSIsczHe6AzQ8HroLQwc96OrMUpb3g=",
+        "lastModified": 1793272365,
+        "narHash": "sha256-4RsZVMjUww1TuKZXXQ127ZPqFWAqAVkM3lIHhFejsrs=",
         "owner": "pingus",
         "repo": "pingus",
-        "rev": "7d9bc4adf2735023fd1bf13b86b384d9f29e7bdb",
+        "rev": "ffe3851f1f9f9f5c245887d89ab4a56399c13769",
         "type": "github"
       },
       "original": {
@@ -376,11 +393,11 @@
     },
     "systems": {
       "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "lastModified": 1791244623,
+        "narHash": "sha256-uuanbkFk8a313Zfrxdcz8Us/yQtaxNnKJtX8v0ZPpd8=",
         "owner": "nix-systems",
         "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "rev": "d36eeed142f88b5a636f2e3856a53c61654cf29b",
         "type": "github"
       },
       "original": {
