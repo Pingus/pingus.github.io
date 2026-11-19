@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
-  <xsl:output 
-     method="html" 
+
+  <xsl:output
+     method="html"
      doctype-public="XSLT-compat"
      encoding="UTF-8"
      />
@@ -11,13 +11,13 @@
   <xsl:param name="filename"/>
 
   <!-- Copy all html4 elements over to the resulting html page -->
-  <xsl:template match=" a | abbr | acronym | address | applet | area | b | base | basefont | 
-                       bdo | big | blockquote  | body | br | button | caption | center | cite | code | col | 
-                       colgroup | dd | del | dfn | dir | div | dl | dt | em | embed | fieldset     | font | form | 
-                       frame | frameset | h1 | h2 | h3 | h4 | h5 | h6 | head | hr | html | i | iframe | img | 
-                       input | ins | isindex    | kbd | label | legend | li | link | map | menu | meta | 
-                       noframes | noscript | object | ol | optgroup | option | p     | param | pre | q | s | 
-                       samp | script | select | small | span | strike | strong | style | sub | sup | table | 
+  <xsl:template match=" a | abbr | acronym | address | applet | area | b | base | basefont |
+                       bdo | big | blockquote  | body | br | button | caption | center | cite | code | col |
+                       colgroup | dd | del | dfn | dir | div | dl | dt | em | embed | fieldset     | font | form |
+                       frame | frameset | h1 | h2 | h3 | h4 | h5 | h6 | head | hr | html | i | iframe | img |
+                       input | ins | isindex    | kbd | label | legend | li | link | map | menu | meta |
+                       noframes | noscript | object | ol | optgroup | option | p     | param | pre | q | s |
+                       samp | script | select | small | span | strike | strong | style | sub | sup | table |
                        tbody | td | textarea | tfoot | th | thead | title | tr | tt | u | ul | var">
 
     <xsl:copy>
@@ -38,10 +38,10 @@
       <xsl:value-of select="." />
     </xsl:message>
   </xsl:template>
-  
+
   <xsl:template match="dlink">
     <a href="{@href}"><xsl:value-of select="@href" /></a>
-  </xsl:template> 
+  </xsl:template>
 
   <xsl:template match="menu">
     <ul>
@@ -82,14 +82,14 @@
           <div id="nav">
             <xsl:apply-templates select="document('menu.xml')" />
           </div>
-          
+
           <div id="header">
             <h1><xsl:value-of select="@title"/></h1>
           </div>
 
           <div id="body">
             <xsl:apply-templates />
-          </div>             
+          </div>
 
           <div id="footer">
             Copyright &#169; 1998-2015
@@ -100,7 +100,7 @@
       </body>
     </html>
   </xsl:template>
-  
+
   <xsl:template match="section">
     <h2><xsl:value-of select="@title" /></h2>
     <xsl:apply-templates />
@@ -203,7 +203,7 @@
       <small><xsl:value-of select="@date"/></small>
       [<small><a href="#faqtoc">Up</a></small>]
     </div>
-    <h3 id="faq{generate-id(question)}"><xsl:apply-templates select="question/node()"/></h3> 
+    <h3 id="faq{generate-id(question)}"><xsl:apply-templates select="question/node()"/></h3>
     <div class="answer"><xsl:apply-templates select="answer/node()"/></div>
   </xsl:template>
 
