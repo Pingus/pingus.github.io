@@ -21,6 +21,11 @@ body
     font-family: monospace;
 }
 
+header, footer, nav, main, section, article
+{
+  display: block;
+}
+
 #logo
 { 
   text-align: center;
@@ -159,7 +164,7 @@ body
   z-index: 1;
 }
 
-div.screenshotmenu-center 
+.screenshotmenu-center 
 { 
   text-align: center;
 }
@@ -210,11 +215,11 @@ p {
   text-indent: 1em;
 }
 
-div.newsitem { 
+.newsitem { 
   margin-bottom: 1.5em;
 }
 
-div.newsdate { 
+.newsdate { 
   font-weight: bold;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -222,13 +227,17 @@ div.newsdate {
   padding-bottom: 0.25em;
 }
 
-div.newsbody {
+.newsbody {
   padding-top: 0.5em;
   padding-left: 1em;
 }
 
-div.answer {
+.answer {
   margin-bottom: 1.5em;
+}
+
+.faqmeta {
+  float: right;
 }
 
 .irc {

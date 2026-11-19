@@ -74,41 +74,47 @@
         <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
       </head>
       <body>
-        <div id="logo">
+        <header id="logo">
           <a href="http://pingus.seul.org"><img src="images/logo_pingus.png" alt="Pingus" /></a>
-        </div>
+        </header>
 
         <div id="page">
-          <div id="nav">
+          <nav id="nav">
             <xsl:apply-templates select="document('menu.xml')" />
-          </div>
+          </nav>
 
-          <div id="header">
-            <h1><xsl:value-of select="@title"/></h1>
-          </div>
+          <main id="main">
+            <header id="header">
+              <h1><xsl:value-of select="@title"/></h1>
+            </header>
 
-          <div id="body">
-            <xsl:apply-templates />
-          </div>
+            <div id="body">
+              <xsl:apply-templates />
+            </div>
+          </main>
 
-          <div id="footer">
+          <footer id="footer">
             Copyright &#169; 1998-2015
             <a href="http://grumbel.blogspot.co.at/">Ingo Ruhnke</a>
             &lt;<a href="mailto:grumbel@gmail.com">grumbel@gmail.com</a>&gt;
-          </div>
+          </footer>
         </div>
       </body>
     </html>
   </xsl:template>
 
   <xsl:template match="section">
-    <h2><xsl:value-of select="@title" /></h2>
-    <xsl:apply-templates />
+    <section id="section{generate-id(.)}">
+      <h2><xsl:value-of select="@title" /></h2>
+      <xsl:apply-templates />
+    </section>
   </xsl:template>
 
   <xsl:template match="subsection">
-    <h3><xsl:value-of select="@title" /></h3>
-    <xsl:apply-templates />
+    <section>
+      <h3><xsl:value-of select="@title" /></h3>
+      <xsl:apply-templates />
+    </section>
   </xsl:template>
 
   <xsl:template match="screenshots">
@@ -160,7 +166,7 @@
   </xsl:template>
 
   <xsl:template match="screenshot-menu">
-    <div class="screenshotmenu-center">
+    <nav class="screenshotmenu-center">
     <ul class="screenshotmenu">
       <li><a href="videos.html">Videos</a></li>
       <!-- <li><a href="screenshots.html">0.8</a></li> -->
@@ -173,38 +179,46 @@
       <li><a href="screenshots-0.1.html">0.1</a></li>
       <li><a href="screenshots-0.0.html">0.0</a></li>
     </ul>
-    </div>
+    </nav>
   </xsl:template>
 
   <xsl:template match="section-toc">
-    <ul>
-      <xsl:for-each select="section">
-        <li><a href="#section{generate-id(.)}">
-            <xsl:apply-templates/></a></li>
-      </xsl:for-each>
-    </ul>
+    <nav class="toc">
+      <ul>
+        <xsl:for-each select="section">
+          <li><a href="#section{generate-id(.)}">
+              <xsl:value-of select="@title"/></a></li>
+        </xsl:for-each>
+      </ul>
+    </nav>
     <hr/>
     <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template match="faq-list">
-    <ul>
-      <xsl:for-each select="faq/question">
-        <li><a href="#faq{generate-id(.)}">
-            <xsl:apply-templates/></a></li>
-      </xsl:for-each>
-    </ul>
+    <nav class="toc">
+      <ul>
+        <xsl:for-each select="faq/question">
+          <li><a href="#faq{generate-id(.)}">
+              <xsl:apply-templates/></a></li>
+        </xsl:for-each>
+      </ul>
+    </nav>
 
     <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template match="faq">
-    <div style="float: right;">
-      <small><xsl:value-of select="@date"/></small>
-      [<small><a href="#faqtoc">Up</a></small>]
-    </div>
-    <h3 id="faq{generate-id(question)}"><xsl:apply-templates select="question/node()"/></h3>
-    <div class="answer"><xsl:apply-templates select="answer/node()"/></div>
+    <article class="faq">
+      <header>
+        <div class="faqmeta">
+          <small><xsl:value-of select="@date"/></small>
+          [<small><a href="#faqtoc">Up</a></small>]
+        </div>
+        <h3 id="faq{generate-id(question)}"><xsl:apply-templates select="question/node()"/></h3>
+      </header>
+      <div class="answer"><xsl:apply-templates select="answer/node()"/></div>
+    </article>
   </xsl:template>
 
   <xsl:template match="news">
@@ -212,10 +226,10 @@
   </xsl:template>
 
   <xsl:template match="news/item">
-    <div class="newsitem">
-      <div class="newsdate"><xsl:value-of select="@date"/></div>
+    <article class="newsitem">
+      <header class="newsdate"><xsl:value-of select="@date"/></header>
       <div class="newsbody"><xsl:apply-templates/></div>
-    </div>
+    </article>
   </xsl:template>
 
   <xsl:template match="german-flag">
