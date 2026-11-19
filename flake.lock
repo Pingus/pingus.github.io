@@ -205,11 +205,11 @@
         "openal-soft-win32": "openal-soft-win32"
       },
       "locked": {
-        "lastModified": 1795094360,
-        "narHash": "sha256-lyXv5v3MFTDAnAy6a32ElHHgvPzTa74ILjDtLDF9zxA=",
+        "lastModified": 1795100097,
+        "narHash": "sha256-Wt7j1baluF6J+Y9xugNQtufc1MIaDcC/2RHVzPrJYsc=",
         "owner": "pingus",
         "repo": "pingus",
-        "rev": "32e7eb94714f16f4914994adbcfc2078385eedd7",
+        "rev": "7aaf1dec5868132f5348d98c2be2794a0543a9cd",
         "type": "github"
       },
       "original": {
